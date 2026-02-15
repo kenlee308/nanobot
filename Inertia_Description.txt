@@ -1,0 +1,17 @@
+# Inertia-Nanobot
+**Type:** Python / Batch Automation Tool
+**Description:**
+Inertia-Nanobot is a lightweight, local AI agent system designed to work with Ollama. It features a "switch connectivity" system allowing it to toggle between different local models (like GPT-OSS, Gemma 3) with specific configurations for context length and tool availability. It includes a "Nanobot" chat interface and RAG capabilities.
+
+**Key Features:**
+- **Model Switching:** Easily switch between models with optimized presets (e.g., 20b models with 4k context, 4b models with 8k context).
+- **RAG Support:** "Retrieval-Augmented Generation" allows the bot to read files from a workspace directory.
+- **Tool Use:** Supports native tool calling or text-only modes depending on the model's capabilities.
+- **Safety**: Includes "Hide JSON Mode" to prevent raw tool calls from leaking into the chat.
+
+**How to Use:**
+1.  **Start Server:** Run `Run_nanobot.bat`.
+2.  **Chat:** Run `nanobot_chat.bat` to open the chat interface.
+3.  **Switch Models:** Use `switch_model.bat` to select a different AI model and configuration.
+4.  **Help:** Run `nanobot_help.bat` to see available modes and options.
+5.  **RAG:** Place text files in your workspace folder to make them searchable by the agent.
