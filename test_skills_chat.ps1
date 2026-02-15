@@ -1,7 +1,16 @@
 $ErrorActionPreference = "Stop"
-$python = "c:\Users\Ken Lee\.gemini\antigravity\scratch\Inertia\.venv\Scripts\python.exe"
-$workspace = "c:\Users\Ken Lee\.nanobot\workspace"
-$cwd = "c:\Users\Ken Lee\.gemini\antigravity\scratch\Inertia"
+
+# Auto-detect paths - users should adjust these if needed
+$python = Join-Path $PSScriptRoot ".venv\Scripts\python.exe"
+if (-not (Test-Path $python)) { $python = "python" }
+
+$configPath = Join-Path $HOME ".nanobot\config.json"
+$config = Get-Content $configPath | ConvertFrom-Json
+$workspace = $config.agents.defaults.workspace
+if ($null -eq $workspace) { $workspace = "~/.nanobot/workspace" }
+$workspace = [System.IO.Path]::GetFullPath([System.Environment]::ExpandEnvironmentVariables($workspace.Replace("~", $HOME)))
+
+$cwd = $PSScriptRoot
 
 Set-Location $cwd
 
