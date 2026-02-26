@@ -14,6 +14,8 @@ This fork adds the following customizations on top of the original [HKUDS/nanobo
 - **Skills Testing:** `test_skills_chat.ps1` for testing calculator, clipboard, and other skills with non-native models
 - **Grant-Aligned Narrative:** Descriptions and documentation updated to support AI literacy workforce development
 
+https://www.youtube.com/watch?v=vokaV_BoXig&t=2s
+
 **Key Features:**  
 - **Model Switching:** Presets for context lengths and tools, adapting to user skill levels.  
 - **RAG Support:** Retrieves from workspace files for context-rich responses.  
